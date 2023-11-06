@@ -181,5 +181,10 @@ nav a:hover {
 }
 
 .imgprogramming1, .imgprogramming2, .imgcontactus1, .imgcontactus2, .imgblog1, .imgblog2 {
-  width: 50%;
+  width: 30%;
+  padding: 3%;
+}
+
+.wireframe {
+  width: 50%
 }
