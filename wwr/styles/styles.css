@@ -276,3 +276,46 @@ footer .social img {
         margin-top: 25px;
     }
 }
+
+
+
+/* up here is all the footer and header 
+
+down here is the body elements to make as the wire frame*/ 
+
+
+main {  
+    display: flex;
+    box-sizing: border-box;
+}
+
+.pos1, .pos2, .pos3 {
+    padding: 5%;
+    text-align: center;
+}
+
+.imgleft2 {
+    float: left;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-right: 15px;
+    margin: 0 0 0 1px;
+    width: 500px;
+}
+
+.imgleft1, .imgleft3 {
+    float: right;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-right: 15px;
+    margin: 0 0 0 15px;
+    width: 500px;
+}
+
+.paragraph1, .paragraph2, .paragraph3 {
+    font-size: 1.3em;
+}
+
+.text1, .text2, .text3 {
+    font-size: 2.5em;
+}
