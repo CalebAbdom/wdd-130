@@ -3,9 +3,13 @@
 /* General styles */
 body {
     font-family: Raleway, sans-serif;
-  }
+}
+
+.mainhome {
+    border: 2px solid #ccc
+}
   
-  h1, h2, h3 {
+h1, h2, h3 {
     font-family: Martel, sans-serif;
     font-size: 15px;
   }
@@ -22,7 +26,7 @@ header {
 /* Add a background color to the top navigation */
 .topnav {
     background-color: #f5eae3;
-    width: 80%;
+    width: 100%;
     /* border-radius: 5em; */
     height: 40px;
     text-align: center;
@@ -53,8 +57,8 @@ header {
 }
 
 .toplogoleft {
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
 }
 
 .toplogoright {
@@ -63,15 +67,57 @@ header {
     border-radius: 50%;
 }
 
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-right: 2px;
+    font-size: 17px;
+}
+
+.topnav .search-container {
+    float: right;
+  }
+  
+  .topnav input[type=text] {
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 5px;
+    margin-right: 16px;
+    background: #cc8b86;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+
+
+
+
+
+
+
+
 
 /* This is the footer */
 
 .footer {
-    padding: 40px 0;
     text-align: center;
-    font-size: 16px;
-    background-color: #cc8b86;
-    
+    font-size: 26px;
+    font-weight: lighter;
+    background-color: #f5eae3;
+    border: 2px solid #ccc
 }
   
 .footer .social-links {
@@ -103,6 +149,29 @@ header {
 }
 
 
+/* PAGINATION */
+
+.pagination {
+    margin: 0 auto;
+    display: flex;
+}
+
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+  /* Style the active/current link */
+  .pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+
 
 
 
@@ -121,8 +190,6 @@ main {
 
 .imgleft {
     float: left;
-    border: 3px solid #fff;
-    border-radius: 10px;
     margin-right: 15px;
     margin: 0 0 0 1px;
     width: 500px;
@@ -133,8 +200,6 @@ main {
 
 .imgright {
     float: right;
-    border: 3px solid #fff;
-    border-radius: 10px;
     margin-right: 15px;
     margin: 0 0 0 15px;
     width: 500px;
@@ -194,6 +259,14 @@ main {
 /* for CONTACT US.HTML page */
 .container {
     text-align: center;
+    margin-bottom: 5em;
+}
+
+.container1 {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 form {
@@ -230,19 +303,13 @@ button:hover {
 
 
 .imgblog1, .imgblog2, .imgblog3 {
-    width: 33.33%;
+    width: 20.33%;
     text-align: center;
-    margin: 5%;
+    flex-basis: 30%;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px
 }
-
-.container1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    font-size: large;
-  }
 
 
 img {
@@ -253,4 +320,32 @@ img {
 p {
     margin-top: 10px;
     font-weight: bold;
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
   }
