@@ -271,6 +271,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    order: 2; /* move container1 to the end */
 }
 
 form {
